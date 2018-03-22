@@ -1,0 +1,26 @@
+.thumbnail {
+  text-align: center;
+  position: relative;
+  width:100;
+  height:100;
+}
+
+div.menu {
+    background-color: lawngreen;
+    overflow: auto;
+    white-space: nowrap;
+   
+}
+
+div.menu a {
+    display: inline-block;
+    color: white;
+    text-align: right;
+    padding: 14px;
+    text-decoration: none;
+    float: right;
+}
+
+div.menu a:hover {
+    background-color: mediumpurple;
+}

@@ -1,0 +1,66 @@
+.btn-group button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: inline;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
+
+#head {
+  color: brown;
+}
+
+a {
+  color: brown;
+}
+a:active {
+  color: yellow;
+}
+
+a:hover{
+  color: red;
+}
+
+.quizBox {
+  margin-top: 15px;
+  margin-left: 250px;
+  margin-right: 400px;
+}
+
+
+div.menu {
+    background-color: lawngreen;
+    overflow: auto;
+    white-space: nowrap;
+   
+}
+
+div.menu a {
+    display: inline-block;
+    color: white;
+    text-align: right;
+    padding: 14px;
+    text-decoration: none;
+    float: right;
+}
+
+div.menu a:hover {
+    background-color: mediumpurple;
+}

@@ -1,0 +1,13 @@
+<h1>NavBar Works</h1>
+  <div class="container">
+    <h3 *ngIf="authService.loggedIn()"> Welcome {{username+'!'}} You Can Take Quiz.</h3>
+      <ul>
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/">Home</a></li>
+      </ul>
+      <ul>
+        <li><a *ngIf="authService.loggedIn()" routerLink="/quiz">Take Quiz</a></li>
+        <li><a *ngIf="!authService.loggedIn()" routerLink="/login">Login</a></li>
+        <li><a *ngIf="authService.loggedIn()" href="#" (click)="onLogoutClick()">Logout</a></li>
+        <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/register">Register</a></li>
+      </ul>
+    </div>

@@ -1,0 +1,53 @@
+
+
+<h1 id="head" style="text-align: left; ">QUIZ APP </h1>
+<h2 style="margin: none; text-align: center; color: purple;" > Welcome {{ username }}</h2>
+
+<div class ="menu">
+
+  <a style="float:right; margin-right:20px" *ngIf="userservice.loggedIn()" href="#" (click)="onLogoutClick()">Logout</a>
+
+  <a  routerLink="/quiz" class="btn btn-default" > Take Quiz</a>
+  <a routerLink="/profile" class="btn btn-default"> Profile </a>
+   <a routerLink="/" class="btn btn-default">Home </a>
+  </div>
+
+  <br>
+
+
+
+  <table id="customers">
+        <div style=" text-align: center; font-size: 30px;"> Attempted Quiz History </div>
+      <tr>
+          <th> Quiz Name </th>
+          <th> Quiz Score </th>
+          <th> Time </th>
+      </tr>
+      <tr *ngFor= "let quizscore of quizhistory">
+          <td> {{ quizscore.name }} </td>
+          <td> {{ quizscore.score }}</td>
+          <td> {{ quizscore.time | date }}</td>
+    </tr>
+  </table>
+
+  <table id="user">
+        <div style=" text-align: center; font-size: 30px;"> User Detail  </div> 
+      <tr>
+         <td style="color: orange; font-size: 20px "> First Name </td>
+         <td> {{ first_name }} 
+    </tr>
+    <tr>
+            <td style="color: orange; font-size: 20px "> Last Name </td>
+            <td> {{ last_name }} 
+       </tr>
+       <tr>
+            <td style="color: orange; font-size: 20px " > Email </td>
+            <td> {{ email }} 
+       </tr>
+
+       <tr>
+            <td style="color: orange; font-size: 20px " > Mobile </td>
+            <td> {{ mobile }} 
+       </tr>
+
+  </table>

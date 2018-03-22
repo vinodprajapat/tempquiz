@@ -1,0 +1,62 @@
+<body style="background: #eee">
+  <h1 style= "padding: 20px; text-align:center;"> Add Quiz </h1>
+
+  <div>
+<form #formRef1="ngForm" style=" padding: 12px;" (ngSubmit) = "onSubmit(formRef1.value)" >
+
+  <div style="width:500px; margin: auto;">
+    <div style="">
+   <label for="name">Quiz Name </label>
+   <input type="text" class="form-control" id="quizname" name="quizname"  [(ngModel)]="quizname"  required  minlength="5">
+</div>
+   <div style="">
+   <label for="name">Author Name </label>
+   <input type="text" class="form-control" id="authorname" name="authorname"  [(ngModel)]="authorname"  required  minlength="5">
+  </div>
+  </div>
+
+ <br>
+   <div >
+     <h4>Add Questions to Quiz</h4>
+    <br>
+ </div>
+
+  <div *ngIf="question?.length > 0"><h5 style="color:red">
+      {{ question.length }} Questions Added to Quiz
+    </h5>
+  </div>
+
+<br>
+
+ <form #formRef="ngForm" (ngSubmit) = "addQuestion(formRef.value); formRef.reset()"  >
+
+  <label for="name"> Question </label>
+   <input type="text" class="form-control" id="qname" name="qname" [(ngModel)]="qname"   required  >
+<div style="width:600px">
+  <label for="name"> Option1 </label>
+     <input type="text" class="form-control" id="op1" name="op1"   [(ngModel)]="op1" required  >
+   <label for="name"> Option2 </label>
+       <input type="text" class="form-control" id="op2" name="op2"   [(ngModel)]="op2" required >
+   <label for="name"> Option3 </label>
+       <input type="text" class="form-control" id="op3" name="op3"  [(ngModel)]="op3"  required >
+   <label for="name"> Option4 </label>
+      <input type="text" class="form-control" id="op4" name="op4"  [(ngModel)]="op4"  required  >
+   <label for="name"> Answer </label>
+    <select class="form-control" id="answer" name="answer" [(ngModel)]="answer" required>
+    <option  [value]=1> 1 </option>
+    <option  [value]=2> 2 </option>
+    <option  [value]=3> 3 </option>
+    <option  [value]=4> 4 </option>
+  </select>
+  </div>
+  <br>
+
+<button type="submit" class="btn btn-primary" [disabled]="!formRef.form.valid" >Add Question </button>
+ </form>
+
+<br> <br>
+ <button type="submit" class="btn btn-success" >Submit Quiz </button>
+</form>
+<button class="btn btn-danger" (click)="goBack()">Back</button>
+</div>
+</body>

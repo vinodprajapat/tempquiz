@@ -1,0 +1,77 @@
+
+<div>
+  <div class="row">
+    <div class="col-md-9">
+  <h1 style="text-align: left;">QUIZ APP</h1>
+</div>
+</div>
+ 
+  <h3 style="text-align: center" *ngIf="authService.loggedIn()"> Welcome {{username}}</h3>
+
+  <div class ="menu">
+
+   <!-- <a *ngIf="!authService.loggedIn()" routerLink="/loginAdmin" class="btn btn-default">Author Registration</a> -->
+  <a  *ngIf="!authService.loggedIn()" routerLink="/authorlogin" class="btn btn-default">Author Login</a>
+  <a *ngIf="!authService.loggedIn()" routerLink="/register" class="btn btn-default">Register</a>
+  <a *ngIf="!authService.loggedIn()" routerLink="/login" class="btn btn-default">Login</a>
+
+  <a style="float:right; margin-right:20px" *ngIf="authService.loggedIn()" href="#" (click)="onLogoutClick()">Logout</a>
+  <a *ngIf="authService.loggedIn()" routerLink="/quiz"> Take Quiz</a>
+  <a *ngIf="authService.loggedIn()"  routerLink="/profile" class="btn btn-default"> Profile </a>
+   <a routerLink="/" class="btn btn-default">Home </a>
+  </div>
+<!--<a  *ngIf="!authService.loggedIn()" routerLink="/authorreg" class="btn btn-default">Author Reg</a>-->
+
+
+  
+</div>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="https://zdnet3.cbsistatic.com/hub/i/r/2017/10/19/58167892-60ef-4eec-a43a-3e5cda4a7ea5/resize/370xauto/44143a11635e1f75ab8ec36318aaa16d/mongo-db-logo.png" alt="placeholder image" width="140" height="140">
+      <div class="caption">
+        <h3>MongoDB</h3>
+        <p>MongoDB is a free and open-source cross-platform document-oriented database program. This NoSQL database program uses JSON-like documents with schemas.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-4">
+    <div class=thumbnail> <img src="https://rishabh.io/recipes/img/004-express-js.png" alt="Generic placeholder image" width="250" height="140">
+      <div class=caption>
+        <h3>Express</h3>
+        <p>Express.js is a Node.js framework. Node.js is a platform that allows JavaScript to be used outside the Web Browsers, for creating web and network applications.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-4">
+    <div class=thumbnail> <img src="https://blog.sagipl.com/wp-content/uploads/2017/03/angularjs-logo-300x162.jpg" alt="Generic placeholder image" width="250" height="140">
+      <div class=caption>
+        <h3>Angular</h3>
+        <p>Angular is a development platform for building mobile and desktop web applications. It is a JavaScript framework which extends HTML attributes with Directives, and binds data to HTML with Expressions.</p>
+      </div>
+    </div>
+  </div>
+<div class="row" style="margin-left:320px">
+  <div class="col-sm-6 col-md-4">
+    <div class=thumbnail> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" alt="Generic placeholder image" width="200" height="140">
+      <div class=caption>
+        <h3>Node</h3>
+        <p>Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-4">
+    <div class=thumbnail> <img src="https://cdn-images-1.medium.com/max/1600/1*yk5D5cQB3jd7EiPzrDrD5w.png" alt="Generic placeholder image" width="250" height="140">
+      <div class=caption>
+        <h3>React</h3>
+        <p>React is a JavaScript library for building user interfaces. It is maintained by Facebook, Instagram and a community of individual developers and corporations.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

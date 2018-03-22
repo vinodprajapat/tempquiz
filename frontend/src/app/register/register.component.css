@@ -1,0 +1,39 @@
+label {
+  font-size: 18px;
+}
+
+h1 {
+  background: orange;
+  color: #000;
+}
+
+
+body {
+    height: 100%;
+     margin: 0;
+  background-color: linen;
+     color: orange
+}
+
+form {
+      border: 3px solid #f1f1f1;
+      float: center;
+      width: 300px;
+	    margin: 0 auto;
+
+    }
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.mes {
+ float: left;
+ text-align: center;
+ left: 100px;
+}
